@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+// Função para realizar as operações matemáticas e imprimir os resultados
+float operacoesbasicas2(int n1) {
+    float resultado;
+
+    // Cálculo do quadrado do valor n1 utilizando a função pow da biblioteca math.h
+    printf("O quadrado do valor é %.f\n", pow(n1, 2));
+
+    // Cálculo do cubo do valor n1 utilizando a função pow da biblioteca math.h
+    printf("O cubo do valor é %.f\n", pow(n1, 3));
+
+    // Cálculo da raiz quadrada do valor n1 utilizando a função sqrt da biblioteca math.h
+    printf("A raiz quadrada do valor é %.3f\n", sqrt(n1));
+
+    // Cálculo da raiz cúbica do valor n1 utilizando a função cbrt da biblioteca math.h
+    printf("A raiz cúbica do valor é %.3f\n", cbrt(n1));
+
+    // Retorna o resultado (esse valor não é utilizado no código)
+    return (resultado);
+}
+
+int main() {
+    int a;
+
+    // Recebe um valor inteiro digitado pelo usuário
+    scanf("%d", &a);
+
+    // Chama a função operacoesbasicas2 passando o valor digitado pelo usuário como argumento
+    operacoesbasicas2(a);
+
+    return 0;
+}

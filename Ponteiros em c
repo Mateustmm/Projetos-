@@ -1,0 +1,32 @@
+#include <stdio.h> // Bibliotecas.
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int a, b, c;
+    int *pa, *pb, *pc; // Ponteiros para inteiros
+
+    a = 7; // Atribui o valor 7 à variável 'a'
+    pa = &a; // O ponteiro 'pa' recebe o endereço de memória da variável 'a'
+
+    b = 7; // Atribui o valor 7 à variável 'b'
+    pb = &b; // O ponteiro 'pb' recebe o endereço de memória da variável 'b'
+
+    c = (*pa + *pb); // O valor de 'c' é a soma dos valores apontados por 'pa' e 'pb'
+    pc = &c; // O ponteiro 'pc' recebe o endereço de memória da variável 'c'
+
+    // Imprime os valores das variáveis e os valores apontados pelos ponteiros.
+    printf("a: %d\n", a);
+    printf("Endereço de memória de 'a': %p\n", pa);
+    printf("Valor apontado por 'pa': %d\n", *pa);
+
+    printf("b: %d\n", b);
+    printf("Endereço de memória de 'b': %p\n", pb);
+    printf("Valor apontado por 'pb': %d\n", *pb);
+
+    printf("c: %d\n", c);
+    printf("Endereço de memória de 'c': %p\n", pc);
+    printf("Valor apontado por 'pc': %d\n", *pc);
+
+    return 0;
+}

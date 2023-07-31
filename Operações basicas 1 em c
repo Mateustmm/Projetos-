@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <conio.h> // Biblioteca conio.h não é padrão do C, pode não estar disponível em todos os compiladores.
+#include <stdlib.h>
+
+// Função para realizar as operações básicas e imprimir os resultados
+float operacoesbasicas(float n1, float n2) {
+    float resultado;
+
+    // Calcula a soma dos valores n1 e n2 e exibe o resultado
+    printf("A soma dos valores é %.f\n", resultado = n1 + n2);
+
+    // Calcula a subtração dos valores n1 e n2 e exibe o resultado
+    printf("A subtração dos valores é %.f\n", resultado = n1 - n2);
+
+    // Calcula a multiplicação dos valores n1 e n2 e exibe o resultado
+    printf("A multiplicação dos valores é %.f\n", resultado = n1 * n2);
+
+    // Calcula a divisão dos valores n1 e n2 e exibe o resultado com uma casa decimal
+    printf("A divisão dos valores é %.1f\n", resultado = n1 / n2);
+
+    return resultado;
+}
+
+int main() {
+    int a, b;
+
+    // Recebe dois valores inteiros digitados pelo usuário
+    scanf("%d", &a);
+    scanf("%d", &b);
+
+    // Chama a função operacoesbasicas passando os dois valores como argumentos
+    operacoesbasicas(a, b);
+
+    return 0;
+}

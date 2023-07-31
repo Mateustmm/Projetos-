@@ -1,0 +1,17 @@
+USE BDFmuQuiManha
+GO
+SELECT 
+    A.ra					AS [RA], 
+    A.nomealuno				AS [Nome do Aluno],
+	G.genero				AS [Genero],
+	E.estadocivil			AS [Estado Civil],
+	C.codcurso				AS [Código do Curso]
+	
+FROM  
+					tQuiManha.ALUNO			AS A
+FULL OUTER JOIN		tQuiManha.CURSO			AS C	ON (A.codcurso = C.codcurso)
+FULL OUTER JOIN		tQuiManha.GENERO		AS G	ON (A.codgenero = G.codgenero)
+FULL OUTER JOIN		tQuiManha.ESTADOCIVIL	AS E	ON (A.estadocivil = E.estadocivil)
+
+WHERE 
+	C.codcurso IS NULL AND G.genero = 'Masculino'

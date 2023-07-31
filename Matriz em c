@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define mTamMaxLinha 2
+#define mTamMaxColuna 2
+
+int iLinha, iColuna;
+
+// Função para preencher a matriz com valores aleatórios entre 0 e fNum (inclusive)
+void preencheMatriz(int Matriz[mTamMaxLinha][mTamMaxLinha], int fNum) {
+  for (iLinha = 0; iLinha < mTamMaxLinha; iLinha++) {
+    for (iColuna = 0; iColuna < mTamMaxColuna; iColuna++) {
+      Matriz[iLinha][iColuna] = rand() % (fNum + 1); // Gera um número aleatório entre 0 e fNum
+    }
+  }
+}
+
+// Função para mostrar a matriz na tela
+void mostraMatriz(int Matriz[mTamMaxLinha][mTamMaxLinha]) {
+  for (iLinha = 0; iLinha < mTamMaxLinha; iLinha++) {
+    for (iColuna = 0; iColuna < mTamMaxColuna; iColuna++) {
+      printf("[%d]", Matriz[iLinha][iColuna]);
+    }
+    printf("\n"); // Imprime uma nova linha ao final de cada linha da matriz
+  }
+}
+
+int main(void) {
+  int Matriz1[mTamMaxLinha][mTamMaxColuna], Matriz2[mTamMaxLinha][mTamMaxColuna];
+
+  srand(time(NULL)); // Semente para a função rand() baseada no tempo atual
+
+  preencheMatriz(Matriz1, 5); // Preenche a primeira matriz com valores aleatórios entre 0 e 5
+  printf("Matriz 1:\n");
+  mostraMatriz(Matriz1); // Mostra a primeira matriz na tela
+
+  preencheMatriz(Matriz2, 5); // Preenche a segunda matriz com valores aleatórios entre 0 e 5
+  printf("\nMatriz 2:\n");
+  mostraMatriz(Matriz2); // Mostra a segunda matriz na tela
+
+  return 0;
+}

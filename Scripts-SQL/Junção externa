@@ -1,0 +1,17 @@
+SELECT 
+    A.ra AS [RA], 
+    A.nomealuno AS [Nome do Aluno],
+	G.genero AS [Genero],
+	E.estadocivil AS [Estado Civil],
+	M.matricula AS [Matricula]
+	M.situacao AS [Situação]
+	
+FROM  BDFmuQuiManha.ALUNO AS A AND BDFmuQuiManha.GENERO AS G AND BDFmuQuiManha.ESTADOCIVIL AS E
+	  LEFT OUTER JOIN BDFmuQuiManha.MATRICULA AS M
+
+ON (A.ra = M.ra) AND G.genero = 'Masculino'
+	  
+
+GROUP BY 
+    A.ra, A.nomealuno, G.genero, E.estadocivil, M.situacao
+	

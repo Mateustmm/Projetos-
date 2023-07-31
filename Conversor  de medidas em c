@@ -1,0 +1,33 @@
+// Bibliotecas
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função que converterá as medidas tendo em vista que pé = 12 polegadas, jarda = 3 pés e milha = 1,760 jarda
+calculadoramedidas(float n1) {
+    // Declaração da variável resultado (não é necessária neste caso, pois o resultado é exibido diretamente com os printf)
+    float resultado;
+
+    // Saída da função que já terá feito o devido cálculo
+    printf("\nPolegadas: %.3f\n", n1 / 12);
+    printf("Milhas: %.f\n", n1 * 3);
+    printf("Jarda: %.3f\n", (n1 * 3) * 1.760);
+
+    // Retorna o resultado (esse valor não é utilizado no código)
+    return (resultado);
+}
+
+// Função principal responsável pela atribuição de valores e execução da função
+int main() {
+    // Declaração de variáveis
+    float a;
+
+    // Impressão pedindo o valor e atribuição de valor à variável.
+    printf("Insira um valor em pés: ");
+    scanf("%f", &a);
+
+    // Chamamento da função criada acima, passando o valor digitado pelo usuário como argumento.
+    calculadoramedidas(a);
+
+    // Retorno da função main
+    return 0;
+}
